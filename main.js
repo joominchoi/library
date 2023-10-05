@@ -4,6 +4,7 @@ const list = document.getElementById("books");
 
 myLibrary.forEach(book => {
   let item = document.createElement("div");
+  item.className = 'book'
   item.innerText = book;
   list.appendChild(item);
 })
