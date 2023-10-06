@@ -1,4 +1,4 @@
-const myLibrary = ["Book 1", "Book 2", "Book 3"];
+const myLibrary = ["Book 1", "Book 2", "Book 3", "Book 4", "Book 5", "Book 6"];
 
 const list = document.getElementById("books");
 
