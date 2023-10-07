@@ -58,7 +58,7 @@ header {
   padding-top: 20px;
 }
 
-#books {
+#library {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 500px));
   grid-template-rows: auto;
