@@ -31,6 +31,7 @@ function render() {
     <div class="card-body">
       <p>${book.pages} pages</p>
       <p class="read-status">${book.read ? "Read" : "Not Read Yet"}</p>
+      <button class="remove-btn" onclick="removeBook(${i})">Remove</button>
     </div>
     `
     libraryEl.appendChild(bookEl);
@@ -45,6 +46,11 @@ function addBookToLibrary() {
   let newBook = new Book(title, author, pages, read)
   myLibrary.push(newBook)
   render();
+}
+
+function removeBook(index) {
+  myLibrary.splice(index, 1);
+  render()
 }
 
 let newBookbtn = document.querySelector('#new-book-btn');
