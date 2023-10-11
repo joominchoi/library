@@ -2,12 +2,12 @@ const myLibrary = [];
 
 const list = document.getElementById("books");
 
-myLibrary.forEach(book => {
-  let item = document.createElement("div");
-  item.className = 'book'
-  item.innerText = book;
-  list.appendChild(item);
-})
+// myLibrary.forEach(book => {
+//   let item = document.createElement("div");
+//   item.className = 'book'
+//   item.innerText = book;
+//   list.appendChild(item);
+// })
 
 function Book(title, author, pages, read) {
   this.title = title;
@@ -31,6 +31,7 @@ function render() {
   for (let i = 0; i < myLibrary.length; i++) {
     let book = myLibrary[i];
     let bookEl = document.createElement("div");
+    bookEl.className = 'book'
     bookEl.innerHTML = 
     `
     <div class="card-header">
