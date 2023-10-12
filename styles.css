@@ -32,7 +32,7 @@ header {
   border-style: solid;
   border-color: black;
   border-radius: 30px;
-  
+
   font-family: roboto-bold;
   font-size: 20px;
   color: black;
@@ -59,7 +59,7 @@ header {
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
-  
+
 }
 
 #library {
@@ -79,7 +79,8 @@ header {
 
 .book {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-content: center;
 
   background-color: gray;
   color: white;
