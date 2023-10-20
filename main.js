@@ -2,21 +2,23 @@ const myLibrary = [];
 
 const list = document.getElementById("books");
 
-// myLibrary.forEach(book => {
-//   let item = document.createElement("div");
-//   item.className = 'book'
-//   item.innerText = book;
-//   list.appendChild(item);
-// })
+// function Book(title, author, pages, read) {
+//   this.title = title;
+//   this.author = author;
+//   this.pages = pages;
+//   this.read = read;
+// }
 
-function Book(title, author, pages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
+class Book {
+  constructor(title, author, pages, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+  }
 }
 
-Book.prototype.toggleRead = function() {
+Book.prototype.toggleRead = function () {
   this.read = !this.read;
 }
 
@@ -32,8 +34,8 @@ function render() {
     let book = myLibrary[i];
     let bookEl = document.createElement("div");
     bookEl.className = 'book'
-    bookEl.innerHTML = 
-    `
+    bookEl.innerHTML =
+      `
     <div class="card-header">
       <h3 class="title">${book.title}</h3>
       <h5 class="author">by ${book.author}</h5>
@@ -65,12 +67,12 @@ function removeBook(index) {
 }
 
 let newBookbtn = document.querySelector('#new-book-btn');
-newBookbtn.addEventListener("click", function() {
+newBookbtn.addEventListener("click", function () {
   let newBookForm = document.querySelector("#new-book-form");
   newBookForm.style.display = "block";
 })
 
-document.querySelector("#new-book-form").addEventListener("submit", function() {
+document.querySelector("#new-book-form").addEventListener("submit", function () {
   event.preventDefault();
   addBookToLibrary();
 })
