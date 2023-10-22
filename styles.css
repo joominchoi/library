@@ -21,6 +21,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  padding: 10px;
 }
 
 #new-book-btn {
@@ -62,6 +64,10 @@ header {
 
 }
 
+#new-book-form {
+  text-align: center;
+}
+
 #library {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 500px));
@@ -71,8 +77,9 @@ header {
 
   box-sizing: border-box;
 
+  padding-top: 20px;
   padding-left: 50px;
-  padding-right: 50px;
+  padding-right: 50px;;
 
   gap: 30px;
 }
