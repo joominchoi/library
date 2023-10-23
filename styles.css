@@ -43,9 +43,6 @@ header {
 }
 
 #new-book-btn:hover {
-  width: 122px;
-  height: 47px;
-
   background-color: black;
 
   color: white;
