@@ -84,11 +84,15 @@ header {
 .book {
   display: flex;
   flex-direction: column;
-  align-content: center;
 
   background-color: gray;
   color: white;
 
   border-radius: 10px;
   box-shadow: 4px 4px 10px #0000002b;
+}
+
+.card-header,
+.card-body {
+  text-align: center;
 }
