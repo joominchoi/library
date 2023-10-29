@@ -82,12 +82,19 @@ function addBookToLibrary() {
   let read = document.querySelector('#read').checked;
   let newBook = new Book(title, author, pages, read)
   myLibrary.push(newBook)
+  resetForm();
   render();
 }
 
 function removeBook(index) {
   myLibrary.splice(index, 1);
   render()
+}
+
+function resetForm() {
+  document.querySelector('#title').value = ''
+  document.querySelector('#author').value = ''
+  document.querySelector('#pages').value = ''
 }
 
 let newBookbtn = document.querySelector('#new-book-btn');
